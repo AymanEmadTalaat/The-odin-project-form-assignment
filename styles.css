@@ -1,0 +1,190 @@
+:root {
+  --color0-: #f3f3f3;
+  --color1-: #e0e1dd;
+  --color2-: #778da9;
+  --color3-: #415a77;
+  --color4-: #1b263b;
+  --color5-: #0d1b2a;
+  --color6-: lightskyblue;
+  --color7-: crimson;
+}
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Marko One", serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1650407422399-8ff982351933?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--color0-);
+}
+
+main {
+  display: flex;
+  gap: 3rem;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  line-height: 1.5;
+}
+
+/* Sidebar image */
+#img {
+  background-image: url("https://images.unsplash.com/photo-1650407420259-adadeba56bec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  min-width: 350px;
+  height: 728px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Span container for the odin logo */
+span {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  padding-block: 1rem;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+/* The odin logo paragraph */
+#odin-p {
+  display: none;
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: 900;
+  font-style: italic;
+  color: var(--color2-);
+}
+
+/* The paragraph element for the photo creator */
+#photoLink-p {
+  display: none;
+}
+
+/* The arrow icon */
+.material-symbols-outlined {
+  position: sticky;
+  left: 20rem;
+  cursor: pointer;
+  width: 25px;
+  background-color: rgba(1, 1, 1, 1);
+}
+
+/* The odin project image */
+#img > img {
+  display: block;
+  margin-inline: auto;
+}
+
+#img > p {
+  text-align: center;
+  margin-top: 19rem;
+}
+
+/* Container for the paragraph on the left and the form element  */
+#img + div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The paragraph on the left */
+#img + div p:first-child {
+  width: 540px;
+  margin-top: 3rem;
+}
+
+/* The Container for the label and input elements */
+.container {
+  display: flex;
+  gap: 6rem;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1.5rem;
+  color: var(--color2-);
+}
+
+input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 7.5px 15px;
+  width: 20vw;
+  background-color: var(--color0-);
+}
+
+input:focus {
+  outline: 2px solid var(--color2-);
+}
+
+input[type="password"]:focus {
+  outline: 1px solid var(--color2-);
+}
+
+input[type="password"]:invalid {
+  border: 3px solid var(--color7-);
+}
+
+/* Submit button */
+.btn {
+  border: 1px solid var(--color0-);
+  border-radius: 2px;
+  padding: 10px 25px;
+  margin-top: 3.5rem;
+  cursor: pointer;
+  background-color: var(--color5-);
+  color: var(--color0-);
+}
+
+.btn:active {
+  transform: translateY(4px);
+}
+
+.btn + p {
+  margin-top: 2rem;
+}
+
+/* Links for the photos creator */
+a {
+  text-decoration: none;
+  color: var(--color2-);
+}
+
+/* Active elements when pressing the arrow icon */
+#img.active {
+  min-width: 450px;
+}
+
+/* The arrow icon */
+.material-symbols-outlined.icon-active {
+  left: 28.1rem;
+  transition: all 0.5s ease;
+}
+
+/* The odin logo paragraph */
+#odin-p.odin-p-active {
+  display: block;
+}
+
+/* The paragraph element for the photo creator */
+#photoLink-p.photo-link-p-active {
+  display: block;
+}
