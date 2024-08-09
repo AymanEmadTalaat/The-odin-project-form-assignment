@@ -34,7 +34,3 @@ icon.addEventListener("click", () => {
   odinPElement.classList.toggle("odin-p-active");
   photoLinkPElement.classList.toggle("photo-link-p-active");
 });
-
-/* if (divImg.classList.toggle("active")) {
-    icon.style.cssText = "position: absolute; left: 28.1rem;";
-  } */
